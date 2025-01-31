@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Depression Prediction</title>
+    <link rel="stylesheet" href="static/style2.css">
+</head>
+<body>
+
+    <form id="featureForm" action="/dep_test" method="POST">
+        <!-- Feature Containers -->
+        <div id="feature1" class="feature-container active">
+            <label class="feature-name">Sleep Interval</label>
+            <div class="options">
+                <label><input type="radio" name="f1" value="0" required> Regular </label>
+                <label><input type="radio" name="f1" value="2"> Excessive Sleeping </label>
+                <label><input type="radio" name="f1" value="2"> Difficulty Sleeping </label>
+            </div>
+            <span class="error">Please select an option before proceeding.</span>
+            <button class="next-button" type="button" onclick="nextFeature(1)">Next</button>
+        </div>
+
+        <div id="feature2" class="feature-container">
+            <label class="feature-name">Appetite</label>
+            <div class="options">
+                <label><input type="radio" name="f2" value="0" required> As Always </label>
+                <label><input type="radio" name="f2" value="1"> Appetite Loss Sometimes </label>
+                <label><input type="radio" name="f2" value="2"> Appetite Loss Regularly </label>
+            </div>
+            <span class="error">Please select an option before proceeding.</span>
+            <button class="next-button" type="button" onclick="nextFeature(2)">Next</button>
+        </div>
+
+        <div id="feature3" class="feature-container">
+            <label class="feature-name">Exploring the Outdoors</label>
+            <div class="options">
+                <label><input type="radio" name="f3" value="0" required> Yeah, but laziness </label>
+                <label><input type="radio" name="f3" value="0"> Definitely </label>
+                <label><input type="radio" name="f3" value="1"> Not really interested </label>
+            </div>
+            <span class="error">Please select an option before proceeding.</span>
+            <button class="next-button" type="button" onclick="nextFeature(3)">Next</button>
+        </div>
+
+        <div id="feature4" class="feature-container">
+            <label class="feature-name" > Friendship Status</label>
+            <div class="options">
+                <label><input type="radio" name="f4" value="0" required> Good </label>
+                <label><input type="radio" name="f4" value="2"> Jealous from Friends </label>
+                <label><input type="radio" name="f4" value="2"> No Friends </label>
+            </div>
+            <span class="error">Please select an option before proceeding.</span>
+            <button class="next-button" type="button" onclick="nextFeature(4)">Next</button>
+        </div>
+
+        <div id="feature5" class="feature-container">
+            <label class="feature-name">Family relationships</label>
+            <div class="options">
+                <label><input type="radio" name="f5" value="0" required> Suppportive & Understanding </label>
+                <label><input type="radio" name="f5" value="1"> Neutral Relationship </label>
+                <label><input type="radio" name="f5" value="2"> Frequent Conflict </label>
+            </div>
+            <span class="error">Please select an option before proceeding.</span>
+            <button class="next-button" type="button" onclick="nextFeature(5)">Next</button>
+        </div>
+
+        <div id="feature6" class="feature-container">
+            <label class="feature-name">Relationships</label>
+            <div class="options">
+                <label><input type="radio" name="f6" value="1" required> Single</label>
+                <label><input type="radio" name="f6" value="0"> Healthy </label>
+                <label><input type="radio" name="f6" value="2"> Complicated </label>
+            </div>
+            <span class="error">Please select an option before proceeding.</span>
+            <button class="next-button" type="button" onclick="nextFeature(6)">Next</button>
+        </div>
+
+        <div id="feature7" class="feature-container">
+            <label class="feature-name">Hobbies & Interests</label>
+            <div class="options">
+                <label><input type="radio" name="f7" value="0" required> Active & Engaged</label>
+                <label><input type="radio" name="f7" value="1"> Occasionally involved </label>
+                <label><input type="radio" name="f7" value="2"> No Hobbies & Interests </label>
+            </div>
+            <span class="error">Please select an option before proceeding.</span>
+            <button class="next-button" type="button" onclick="nextFeature(7)">Next</button>
+        </div>
+
+        <div id="feature8" class="feature-container">
+            <label class="feature-name">Self Perception</label>
+            <div class="options">
+                <label><input type="radio" name="f8" value="0" required> Confident & Positive</label>
+                <label><input type="radio" name="f8" value="1"> Neutral or Unsure </label>
+                <label><input type="radio" name="f8" value="2"> Negative & Critical </label>
+            </div>
+            <span class="error">Please select an option before proceeding.</span>
+            <button class="next-button" type="button" onclick="nextFeature(8)">Next</button>
+        </div>
+
+        <div id="feature9" class="feature-container">
+            <label class="feature-name">Bullying Experience</label>
+            <div class="options">
+                <label><input type="radio" name="f9" value="0" required> Never Bullied</label>
+                <label><input type="radio" name="f9" value="1"> Occasionally Bullied </label>
+                <label><input type="radio" name="f9" value="2"> Frequently Bullied  </label>
+            </div>
+            <span class="error">Please select an option before proceeding.</span>
+            <button class="next-button" type="button" onclick="nextFeature(9)">Next</button>
+        </div>
+
+        <div id="feature10" class="feature-container">
+            <label class="feature-name">Social Media Impact</label>
+            <div class="options">
+                <label><input type="radio" name="f10" value="0" required> Positive Impact</label>
+                <label><input type="radio" name="f10" value="1"> Neutral Impact </label>
+                <label><input type="radio" name="f10" value="2"> Negative Impact  </label>
+            </div>
+            <span class="error">Please select an option before proceeding.</span>
+            <button class="next-button" type="button" onclick="nextFeature(10)">Next</button>
+        </div>
+
+        <div id="feature11" class="feature-container">
+            <label class="feature-name">Academic Pressure</label>
+            <div class="options">
+                <label><input type="radio" name="f11" value="0" required> No Pressure</label>
+                <label><input type="radio" name="f11" value="1"> Manageable Pressure </label>
+                <label><input type="radio" name="f11" value="2"> Overwhelming Pressure  </label>
+            </div>
+            <span class="error">Please select an option before proceeding.</span>
+            <button class="next-button" type="button" onclick="nextFeature(11)">Next</button>
+        </div>
+
+        <div id="feature12" class="feature-container">
+            <label class="feature-name">Intoxication</label>
+            <div class="options">
+                <label><input type="radio" name="f12" value="0" required> No use</label>
+                <label><input type="radio" name="f12" value="1"> Occasional use</label>
+                <label><input type="radio" name="f12" value="2"> Frequent use</label>
+            </div>
+            <span class="error">Please select an option before proceeding.</span>
+            <button class="next-button" type="button" onclick="nextFeature(12)">Next</button>
+        </div>
+
+        <div id="feature13" class="feature-container">
+            <label class="feature-name">Goals & Ambitions</label>
+            <div class="options">
+                <label><input type="radio" name="f13" value="0" required> Clear & Ambitious Goals</label>
+                <label><input type="radio" name="f13" value="1"> Unclear or Minimal Goals</label>
+                <label><input type="radio" name="f13" value="2"> No Goals or Ambitions </label>
+            </div>
+            <span class="error">Please select an option before proceeding.</span>
+            <button class="next-button" type="button" onclick="nextFeature(13)">Next</button>
+        </div>
+
+        <div id="feature14" class="feature-container">
+            <label class="feature-name">Age</label>
+            <div class="options">
+                <label><input type="radio" name="f14" value="0" required> 0-13</label>
+                <label><input type="radio" name="f14" value="2"> 14-25 </label>
+                <label><input type="radio" name="f14" value="1"> 26+ </label>
+            </div>
+            <span class="error">Please select an option before proceeding.</span>
+            <button class="next-button" type="button" onclick="nextFeature(14)">Next</button>
+        </div>
+
+        <div id="feature15" class="feature-container">
+            <label class="feature-name">Grade</label>
+            <div class="options">
+                <label><input type="radio" name="f15" value="0" required> Satisfied </label>
+                <label><input type="radio" name="f15" value="2"> Needs Improvement </label>
+            </div>
+            <span class="error">Please select an option before proceeding.</span>
+            <button class="next-button" type="submit">Submit</button>
+        </div>
+    </form>
+
+    <script>
+        function nextFeature(current) {
+            // Check if the user has selected an option
+            const currentFeature = document.getElementById(`feature${current}`);
+            const selectedOption = currentFeature.querySelector('input[type="radio"]:checked');
+            const error = currentFeature.querySelector('.error');
+
+            if (!selectedOption) {
+                // Show error message if no option is selected
+                error.style.display = 'block';
+            } else {
+                // Hide error and move to the next feature
+                error.style.display = 'none';
+                currentFeature.classList.remove('active');
+                const next = document.getElementById(`feature${current + 1}`);
+                if (next) {
+                    next.classList.add('active');
+                }
+            }
+        }
+    </script>
+</body>
+</html>

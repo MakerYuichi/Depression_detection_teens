@@ -1,0 +1,133 @@
+/* General body styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: radial-gradient(circle, #fff5f5cd 20%, transparent 36%);
+    background-size: 200px 200px;
+    text-align: center;
+    margin: 0;
+    background-color: #bad2ff; /* Light blue background */
+    padding: 20px;
+    line-height: 1.8;
+}
+
+/* Container for each feature question */
+.feature-container {
+    background: radial-gradient(circle, #fbfbfb 45%, transparent 46%);
+    background-size: 800px 800px;
+    background-position: center;
+    margin: 100px auto;
+    border: 5px solid #7fa1f2; /* Light blue border */
+    background-color: #daecfd;;
+    padding: 100px;
+    border-radius: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15); /* Subtle shadow for depth */
+    text-align: center;
+    max-width: 700px;
+    display: none; /* Hidden by default */
+}
+
+.feature-name{
+    font-size: 50px;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    line-height: 1.6;
+    letter-spacing: 1.2px;
+    color: #333333;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+.active {
+    display: block;
+}
+
+/* Styling for buttons */
+button {
+    margin: 15px 0;
+    padding: 12px 25px;
+    font-size: 16px;
+    background-color: #0078d7;
+    color: #ffffff;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.next-button {
+    display: block;
+    margin: 30px auto;
+}
+
+/* Hover effect for buttons */
+button:hover {
+    background-color:#005bb5; /* Darker blue on hover */
+    transform: scale(1.1); /* Slight zoom effect */
+}
+
+/* Styling for labels */
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #333;
+}
+
+/* Options container */
+.options {
+    text-align: left;
+    display: inline-block;
+    line-height: 1.6;
+    margin: 10px 0;
+    padding-left: 20px;
+}
+
+.options input[type="radio"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #0078d7;
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    position: relative;
+    margin-right: 10px;
+}
+
+.options input[type="radio"]:checked {
+    background-color: #00aeff; /* Filled color when selected */
+    border-color: #00478e; /* Border color when selected */
+}
+
+.options input[type="radio"]:checked::before {
+    content: "✓";
+    font-size: 19px;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.options input[type="radio"]:hover {
+    border-color: #0482ff;
+    transform: scale(1.2);
+}
+
+.options label{
+    font-size: 22px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    color: #444444;
+    letter-spacing: 0.5px;
+}
+
+
+.error {
+    color: red;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 10px;
+    display: none; /* Hidden by default */
+}
