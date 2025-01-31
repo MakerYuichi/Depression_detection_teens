@@ -1,0 +1,83 @@
+<!-- templates/result.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    <link rel="stylesheet" href="../static/style_result.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body class="home">
+    <nav>
+        <img src="../static/symbol.png" class="symbol">
+        <div class="btn">
+        <a href="/" style="text-decoration: none;">Home</a> |
+        <a href="/dep_test">Depression Test</a> |
+        <a href="feedback.html">Feedback</a> |
+        <a href="about-us.html">About Us</a>
+    </div>
+    </nav>
+    
+    <br>
+    <br>
+    
+    {% if results == "High" %}
+        <h1> 🔥 High Depression: When It’s Time to Call in Reinforcements </h1>
+        <h2> What it feels like? </h2>
+        <p> High depression can feel like you’re trapped in a thunderstorm that never ends. It’s an intense, overwhelming state that saps your energy, 
+            leaves you feeling hopeless, and may even make you question your purpose. You might feel utterly drained, as if you’re carrying the weight of 
+            the world on your shoulders. Concentration becomes nearly impossible, sleep feels elusive, and the simplest tasks can feel like climbing a mountain.
+            It’s important to know that even in this darkness, there’s a path toward light—and you don’t have to walk it alone. </p>
+        <h2> Your Game Plan: </h2>
+        <p> <b> ☞ Reach Out Right Away: </b> Call a therapist, a trusted friend, or a hotline. Help is just a conversation away. <br>
+            <b> ☞ Be Gentle with Yourself: </b> Your courage to face this head-on is your superpower. <br>
+            <b> ☞ Hold Onto Hope: </b> Every day you take a step toward recovery, you’re rewriting your story. <br>
+             </p>
+        <p> <b> A Truth to Hold Close: </b> The storm may feel endless, but the skies always clear. You are not alone, and brighter days are ahead. </p>
+    {% elif results == "Mild" %}
+    <h1> 🌈 Mild Depression: When Your Inner Spark Needs Reigniting </h1>
+    <h2> What it feels like? </h2>
+    <p> Think of mild depression as walking through life with a foggy lens. You’re going through the motions, 
+        checking off your to-do list, but everything feels... dull. Smiles feel forced, and even the things you usually 
+        love—like your favorite TV show or a hangout with friends—don’t seem to light you up the way they used to. You may feel a bit stuck, 
+        like you’re running on autopilot and can’t quite figure out how to change gears.
+    </p>
+    <h2> Your Game Plan: </h2>
+    <p> <b> ☞ Set Micro-Goals: </b> Tackle one thing at a time. Even checking off “Make coffee” is a win! <br>
+        <b> ☞ Explore New Adventures: </b> Always wanted to try pottery, kickboxing, or gardening? Now’s your chance. <br>
+        <b> ☞ Talk It Out: </b> Share your feelings with someone who truly listens. Vulnerability builds strength. <br>
+         </p>
+         <p> <b> Did You Know? </b> Nature is a natural mood booster. Spend time outdoors, soak up some sunlight, and let those feel-good vibes flow! </p>
+    {% elif results == "Moderate" %}
+    <h1> 🌊 Moderate Depression: Navigating Heavier Waves </h1>
+    <h2> What it feels like? </h2>
+    <p> Moderate depression can feel like trying to swim in deep water with weights tied to your ankles. Everyday tasks like getting out of bed, 
+        focusing at work, or making decisions feel like monumental challenges. It’s more than just a bad day or a passing mood—it’s a persistent heaviness. 
+        You might feel like crying for no reason, avoiding social interactions, or struggling to see the purpose in things you once cared about. The good news? 
+        You don’t have to face these waves alone.
+    </p>
+    <h2> Your Game Plan: </h2>
+    <p> <b> ☞ Team Up with a Pro: </b> Therapists and counselors are your personal life coaches—don’t hesitate to reach out! <br>
+        <b> ☞ Break It Down: </b> Facing a mountain? Conquer it pebble by pebble. Small progress leads to big wins. <br>
+        <b> ☞ Find Your Tribe: </b> Connect with others who understand. There’s strength in shared experiences. <br>
+    </p>
+         <p> <b> You Are Resilient: </b> These moments of struggle are part of your story, but they don’t define you. You’re stronger than you know! </p>
+    {% else %}
+    <h1> 🌟 Low Depression: Your Mind Whispering “I Need a Break” </h1>
+    <h2> What it feels like? </h2>
+    <p> Ever feel like life’s volume has been turned down just a notch? Low depression is like the quiet hum of exhaustion, a subtle heaviness that 
+        makes everything feel just a bit harder. You might find yourself hitting snooze more often, zoning out during conversations, or feeling a slight 
+        disconnection from the things that usually bring you joy. It’s as if your inner spark has dulled, but it’s still there, waiting to shine again.
+    </p>
+    <h2> Your Game Plan: </h2>
+    <p> <b> ☞ Move Your Body:</b> A quick dance-off in your living room or a stroll in the park can work wonders. <br>
+        <b> ☞ Connect: </b> Call that friend who always makes you laugh. Laughter is medicine! <br>
+        <b> ☞ Mini Wins: </b> Try a new recipe, declutter a drawer, or start that book you’ve been eyeing. Small joys add up! <br>
+    </p>
+         <p> <b> Remember: </b> Sometimes, the smallest steps lead to the biggest changes. You’ve got this! </p>
+    {% endif %}
+    
+
+</body>
+</html>

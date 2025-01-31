@@ -1,0 +1,124 @@
+<!-- templates/welcome.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+
+<div class = 'welcome' id = 'welcome'> <div class="text">Yo GenZers!</div>
+</div>
+
+
+<div class='home' id="home">
+
+    <nav>
+        <img src="../static/symbol.png" class="symbol">
+        <div class="btn">
+        <a href="/" style="text-decoration: none;">Home</a> |
+        <a href="dep_test">Depression Test</a> |
+        <a href="feedback.html">Feedback</a> |
+        <a href="about-us.html">About Us</a>
+    </div>
+    </nav>
+</div>
+
+<img class="pic1" src="../static/pic1.jpg"></img>
+<div class="content">
+
+    <h1> Introduction</h1>
+    <p>
+        Did you know that depression is one of the most pressing challenges facing teens and young adults aged 19-25 today?
+        It doesn't just affect their academic success or social lives—it deeply impacts their happiness and sense of purpose.
+        Studies reveal that this age group is particularly vulnerable, as they navigate life-changing transitions such as starting college, pursuing careers, and exploring personal independence.
+        The silent weight of depression can cloud their brightest moments, often leaving them feeling isolated and misunderstood.
+    </p>
+    <p>
+        This phase of life is bursting with opportunities: exploring independence, pursuing dreams, building relationships, and shaping the future.
+        However, for many, these opportunities come hand-in-hand with overwhelming stress, emotional struggles, and the pressure to succeed.
+        The stigma surrounding mental health often prevents young people from seeking help, leaving them to battle their challenges in silence.
+        The consequences can be dire, ranging from declining academic performance to strained relationships, and in severe cases, even the tragic loss of life.
+    </p>
+    <p>
+        Here’s the hope: depression is treatable, and no one has to face it alone. By raising awareness, fostering understanding, and taking timely action,
+        we can break the stigma and provide young adults with the tools and support they need to overcome these struggles.
+        Imagine a world where no young person feels abandoned or powerless—a world where they can confidently pursue their goals and embrace the joy of life.
+        Together, we can create such a world. Through compassion, education, and action, we have the power to empower this generation to rise stronger, happier, and more fulfilled than ever before.
+    </p>
+    <h1> Why us? </h1>
+    <div class="container">
+        <div class="box">
+            <h2> Exceptional Accuracy </h2>
+            <p> Our platform integrates a cutting-edge Support Vector Machine (SVM) model, achieving an impressive 97.5% accuracy in predicting depression levels.
+                This ensures that users receive highly reliable and precise results, setting us apart from traditional tools.</p>
+        </div>
+        <div class="box">
+            <h2> Personalized and Comprehensive Insights </h2>
+            <p> We analyze a diverse range of behavioral and lifestyle factors,
+                this provides a personalized and holistic understanding of your mental health.
+                 By intelligently weighting these features, we capture the complex, real-world interactions that contribute to depression,
+                 making our predictions more reliable than those of competing websites.
+            </p>
+        </div>
+        <div class="box">
+            <h2> Reliable and Scalable </h2>
+            <p> With a training dataset of over 23,000 records, our models are built on a solid foundation of diverse and real-world data.
+                The use of weighted analysis ensures that the system remains both scalable and consistent, even as the user base grows.
+            </p>
+        </div>
+         <div class="box">
+            <h2> Tailored for Young Adults </h2>
+            <p> Our platform specifically caters to young adults aged 19–25, a demographic facing unique life transitions and challenges.
+                We focus on the behavioral and lifestyle factors most relevant to this group, making our approach highly targeted and effective.
+            </p>
+        </div>
+        <div class="box">
+            <h2>Cutting-Edge Machine Learning </h2>
+            <p> Many websites use outdated or less efficient algorithms. We leverage modern, high-performing models such as:
+                SVM: Known for handling complex, non-linear data.
+                XGBoost: Exceptional for imbalanced datasets and nuanced patterns.
+                These state-of-the-art models ensure our predictions are faster and more accurate.
+
+            </p>
+        </div>
+        <div class="box">
+            <h2>More Than Detection: Early Intervention </h2>
+            <p> we leverage the accuracy of our weighted models to guide users toward actionable insights:
+                Recommendations for lifestyle adjustments.
+                Encouragement to seek professional help when needed.
+                This proactive approach, grounded in data-driven accuracy, empowers users to take control of their mental health.
+
+
+            </p>
+        </div>
+    </div>
+   <div class="link">
+    <a href="dep_test.html" >Find now</a>
+   </div>
+</div>
+
+
+<script>
+    setTimeout(() => {
+        const welcome = document.getElementById('welcome');
+        if (welcome) {
+            welcome.style.display = 'none';
+        }
+
+        document.body.style.overflowY = 'auto'; }, 2000);
+
+</script>
+
+<footer>
+    <div class="footer">
+        <p>© 2024 Your Website Name. All rights reserved.</p>
+        <div class="social-links">
+            <a href="#">Twitter</a> | <a href="#">LinkedIn</a> | <a href="#">Facebook</a>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
